@@ -1,0 +1,49 @@
+구분자 (delimiter)
+
+String Handling
+
+Handling=조작
+
+"String"" 클래스는 불변(immutable) 객채로, 문자열을 표현하고 처리하는데 사용된다.
+문자열을 조작할 떄마다 새로운 String 객체가 생성되므로, 반복적인 문자열 조작 작업에는
+바효율적일 수 있다.
+
+기본적인 STring 메소드
+
+1.length() : 문자열의 길이를 반환한다.
+2.chatAt(int index) : 주어진 인덱스에 있는 문자열은 반환한다.
+3.substring(int beginIndex, int endIndex) : 문자열에서 시작 인덱스로부터 종료
+인덱스 전까지의 부분 문자열을 반환 한다.
+4. concat(String str): 주어진 문자열을 원래 문자열에 연결하여 새로운 문자열을 반환합니다.
+5. indexOf(String str): 주어진 문자열이 처음 나타나는 위치의 인덱스를 반환합니다. 없으면 -1을 반환합니다.
+6. lastIndexOf(String str): 주어진 문자열이 마지막으로 나타나는 위치의 인덱스를 반환합니다. 없으면 -1을 반환합니다.
+7. replace(CharSequence target, CharSequence replacement): 문자열에서 대상 문자열을 모두 찾아 교체 문자열로 바꾼 새로운 문자열을 반환합니다.
+8. toLowerCase(): 문자열의 모든 문자를 소문자로 변환한 새로운 문자열을 반환합니다.
+9. toUpperCase(): 문자열의 모든 문자를 대문자로 변환한 새로운 문자열을 반환합니다.
+10. trim(): 문자열의 시작과 끝에서 공백 문자를 제거한 새로운 문자열을 반환합니다.
+11. split(String regex): 주어진 정규식을 기준으로 문자열을 나누어 문자열 배열로 반환합니다.
+
+StringBuilder 클래스와 StringBuffer 클래스
+
+이 두 클래스는 가변(mutable) 객체로, 문자열을 변경하거나 조작할떄 사용되며, 효율적인 문자열 처리가 가능하다.
+
+StringBuiler 클래스는 스레드에 안전하지 않은 반변, StringBuffer는 스레드에 안전하는 차이점이 있습니다.
+일반적으로 StringBuiler를사용하는 것이 성능상 이점이 있습니다.
+
+주요 메소드
+
+append() : 문자열, 숫자, 문자 등 다양한 타입의 값을 빌더에 추가합니다.
+insert() : 주어진 인덱스에 문자열, 숫자, 문자 등 다양한 차입의 값을 빌더에 삽입합니다.
+delete() : 주어진 시작 인덱스와 끝 인덱스 사이의 문자를 빌더에서 삭제합니다.
+replace() : 주어진 시작 인덱스와 끝 인덱스 사이의 문자열을 주어진 문자열로 대체합니다.
+reverse() : 빌더의 문자열을 뒤집습니다.
+length() : 빌더의 문자열을 반환 합니다.
+setLength(int length) : 빌더의 문자열의 길이를 변경합니다. 길이가 늘어나면 NULL 문자가 채워지며, 길이가 줄어들면 문자가 잘립니다.
+charAt(int index) : 주어진 인덱스에 있는 문자를 반환한다.
+setCharAt(int index, char ch) : 주어진 인덱스에 있는 문자를 새로운 문자로 바꿉니다.
+toString() : 빌더의 문자열을 'String' 객체로 반환합니다.
+
+정규식을 이용한 문자열 처리
+
+정규식 Regular Ecpression
+Pattern 클래스와 matcher 클래스를 사용하여 규식을 이용한 문자열 처리를 수행할 수 있습니다.
